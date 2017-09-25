@@ -11,10 +11,7 @@ class Main extends Component {
          <div>
             <h1>
                <Link to="/">Insta Things</Link>
-            </h1>
-            <Link to="/view/abcs">
-               Components
-            </Link>
+            </h1>            
             <Route path="/view/:postId" component={Single}/>
             <Route exact path={match.url} component={PhotoGrid}/>
          </div>
