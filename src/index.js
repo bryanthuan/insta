@@ -1,22 +1,24 @@
 // let's go!
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory'
-const history = createHistory();
+import { Router, Route } from 'react-router-dom';
+// import createHistory from 'history/createBrowserHistory'
+// const history = createHistory();
 
 import './css/style.css';
 
-import Main from './components/Main';
-import Single from './components/Single';
-import PhotoGrid from './components/PhotoGrid';
+import App from './components/App';
+
+import { Provider } from 'react-redux';
+
+import store, { history } from './store';
 
 
-const Root = () => {
-   return (
-      <Router history={history}>         
-         <Route path="/" component={Main}></Route>         
-      </Router>
+const Root = (
+      <Provider store={store}>
+         <Router history={history}>         
+            <Route path="/" component={App} />         
+         </Router>
+      </Provider>
    );
-}
-render(<Root />, document.getElementById('root'));
+render(Root, document.getElementById('root'));
