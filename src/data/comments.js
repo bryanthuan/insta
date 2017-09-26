@@ -7,7 +7,7 @@ const comments = {
   ],
   "BAcyDyQwcXX":[
     {
-      "text":"Wes. WE should have lunch.",
+      "text":"Brian. You are cool",
       "user": "jdaveknox"
     },
     {
@@ -15,11 +15,11 @@ const comments = {
       "user": "jdaveknox"
     },
     {
-      "text":"@jdaveknox yes!",
+      "text":"#handsome !",
       "user": "wesbos"
     },
     {
-      "text":"😍 love Hamilton!",
+      "text":"😍 love Diep!",
       "user": "willowtreemegs"
     }
   ],
