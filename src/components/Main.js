@@ -6,8 +6,7 @@ import PhotoGrid from './PhotoGrid';
 
 class Main extends Component {
    render() {
-      const {match} = this.props;
-      console.log(this.props);
+      const {match} = this.props;    
       
       return (
          <div>
