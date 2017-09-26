@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
@@ -15,7 +15,12 @@ const defaultState = {
    comments
 };
 
-const store = createStore(rootReducer, defaultState, applyMiddleware(middleware));
+const enhancers= compose(
+   window.devToolsExtension? window.devToolsExtension() : f => f,
+   applyMiddleware(middleware)
+);
+
+const store = createStore(rootReducer, defaultState, enhancers);
 
 // export const history = syncHistoryWithStore(createHistory(), store);
 export default store;
